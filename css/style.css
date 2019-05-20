@@ -1,0 +1,457 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+ background-color: #2e2f44;
+    overflow-x: hidden;
+}
+
+/* Style tab links */
+.tablink {
+    font-family: 'Monoton', cursive;
+  background-color: #2e2f44;
+  color:#f5dc80;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 25px;
+  width: 25%;
+}
+
+.tablink:hover {
+ text-decoration: underline;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+    
+}
+
+.tabcontent h1{
+     text-shadow: 2px 2px #f5dc80;
+    font-family: 'Monoton', cursive;
+    font-size: 165px;
+    margin:0;
+    
+}
+
+article{
+    text-shadow: 1px 1px white;
+   
+    font-size: 40px;
+    font-family: 'Monoton';
+   
+}
+
+
+#Contact h1{
+    font-size: 50px;
+}
+#news_intro h1{
+    font-size: 50px;
+}
+
+#Home {}
+#News {background-color:#2e2f44;}
+#Contact {background-color: #2e2f44;;}
+#About {
+    background-color: #2e2f44;
+     font-family: 'Monoton', cursive;
+ text-shadow: 1px 1px #f5dc80;
+    font-size: 30px;
+    color:black;
+   
+}
+
+
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  transform-origin: top right;
+  transform: skewY(-4.398705355deg);
+  margin: 0 6.4vw 0 28%;
+}
+li{
+  transform-origin: top left;
+  transform: skewY(4.398705355deg) rotatez(14.03624deg);
+  padding-top: 150%;
+  z-index: 1;
+  transition-property: z-index;
+  transition-duration: .3s;
+}
+.details{
+  
+  position: absolute;
+  z-index: 2;
+  width: 98%;
+  height: 95%;
+  top: 0;
+  background-color:#f5dc80;
+  border-radius: 2vw;
+  box-shadow: inset 0px 0px 0px 7vw #FCF8F4;
+  box-sizing: border-box;
+  webkit-filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
+  transform: rotate(0deg) translate(0, 0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+
+.details h2, p, img {
+  position: absolute;
+  z-index: 4;
+}
+
+.details p{
+ font-size:1.4em; 
+  background-color: #FCF8F4;
+  padding: 2% 2.5% 2% 2.5%;
+}
+.details p:nth-child(2n){
+  top: 3%;
+  left: 5%;
+}
+.details p:nth-child(2n+1){
+  transform: rotatez(180deg);
+  bottom: 3%;
+  right: 5%;
+}
+.details h2{
+  text-align: center;
+  width: 122%;
+  left: -11%;
+  top: 46%;
+  transform: rotatez(-45deg);
+  background-color: #FCF8F4;
+  line-height: 140%;
+  transition-property: top;
+  transition-duration: .3s;
+}
+.details img{
+  width: 50%;
+  top: 50%;
+  left: 50%;
+}
+.details img:nth-child(2n){
+  transform: translateX(-30%) translateY(5%) rotatez(135deg);
+  transition-property: width,transform;
+  transition-duration: .3s;
+}
+.details img:nth-child(2n+1){
+  transform: translateX(-70%) translateY(-105%) rotatez(-45deg);
+  transition-property: width,transform;
+  transition-duration: .3s;
+}
+
+li:hover{ 
+  z-index: 4;
+}
+li:hover h2{ 
+  top: 64%;
+}
+li:hover .details{ 
+  transform: rotate(-14.03624deg) translate(5.5%, 15%) scale(1.5);
+}
+li:hover img:nth-child(2n){ 
+  width: 60%;
+  transform: translateX(-15%) translateY(60%) rotatez(135deg);
+}
+li:hover img:nth-child(2n+1){ 
+  width: 120%;
+  transform: translateX(-65%) translateY(-75%) rotatez(-45deg);
+}
+@media (min-width:300px) { 
+  body{
+    font-size: 2.75vw;
+  }
+  ul {
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 3vw;
+    margin: 0 3.9vw 0 15vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 4vw #FCF8F4;
+  }
+}
+
+@media (min-width:600px) { 
+  body{
+    font-size: 1.95vw;
+  }
+  ul {
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 2vw;
+    margin: 0 2.8vw 0 10vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 2.8vw #FCF8F4;
+  }
+}
+
+@media (min-width:900px) { 
+  body{
+    font-size: 1.5vw;
+  }
+  ul {
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1.5vw;
+    margin: 0 2.2vw 0 8vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 2.2vw #FCF8F4;
+  }
+}
+
+@media (min-width:1200px) { 
+  body{
+    font-size: 1.25vw;
+  }
+  ul {
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 1vw;
+    margin: 0 1.8vw 0 6.5vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 1.8vw #FCF8F4;
+  }
+}
+
+@media (min-width:1500px) { 
+  body{
+    font-size: 1vw;
+  }
+  ul {
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 1vw;
+    margin: 0 1.5vw 0 5.5vw;
+  }
+  .details{
+    box-shadow: inset 0px 0px 0px 1.5vw #FCF8F4;
+  }
+}
+
+ /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+} 
+
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+} 
+
+.album_show{
+    margin-top: 8vh;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'arial';
+    height: 450px;
+    background-color: #f5dc80;
+}
+
+.album_show img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 10px 10px 5px grey;
+    margin-left: 30vw;
+    margin-top: -50vh;
+    
+}
+
+
+.album_show img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
+.button {
+    font-family: 'Monoton', cursive;
+  background-color: #f5dc80;
+  border: solid 2px black;
+    border-radius: 10px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+ 
+    font-family: 'Monoton', cursive;
+  background-color:  #2e2f44;
+  border: solid 2px #f5dc80;
+    border-radius: 10px;
+  color: #f5dc80;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+.login-page{
+color: white;
+    padding: 20px;
+     background-color:  #2e2f44;
+  border: solid 2px #f5dc80;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+    border-radius: 4px;
+}
+
+input[type=password]:focus {
+  border: 3px solid #555;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #f5dc80;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2e2f44;
+border: 2px solid #f5dc80;
+}
+
+.add_cd{
+    padding: 20px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
